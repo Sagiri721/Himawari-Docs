@@ -1,0 +1,159 @@
+{
+  "main": {
+    "id": "56fd923b93d6d2f9",
+    "type": "split",
+    "children": [
+      {
+        "id": "3acd51735455e12c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c8232ba1e6f86d7e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Rooms.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "306459e48fae81f1",
+    "type": "split",
+    "children": [
+      {
+        "id": "6aeea107b90d24a6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e7a8820f3310f7ef",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "6ca1c0f535524188",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "360016877a74ce93",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "6c8c93cdf201f19c",
+    "type": "split",
+    "children": [
+      {
+        "id": "67cdbe54321a2146",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "bdc612c649272b02",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Rooms.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "963d113ece0f842c",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Rooms.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "85c16a36a816c0b6",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "a68d4532cc5142ec",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Rooms.md"
+              }
+            }
+          },
+          {
+            "id": "a8094fea92422eef",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 259.5
+  },
+  "active": "bdc612c649272b02",
+  "lastOpenFiles": [
+    "Objects.md",
+    "Rooms.md",
+    "images/tab2.png",
+    "Animation.md",
+    "Sprites.md",
+    "object.md",
+    "images/editor 1.png",
+    "Pasted image 20221118200604.png",
+    "2022-10-22.md",
+    "2022-10-13.md"
+  ]
+}
