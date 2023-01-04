@@ -90,7 +90,9 @@ The second tab, Object Parameters, has input fields for you to input you object 
 If you did in fact import [objects](Objects), it means that by pressing the arrow button, you will cycle through your available [objects](Objects) and be able to place them.
 ![[tab2.png]]
 
-The final tab is the Tileset and Project tab, it is made out of only 2 buttons, the _Import Tileset_ ans _Import Objects_ button, that both open a file chooser window in where you input, respectivelly, the tile set image or the Assets/Objects directory of a himawari project. It will import all the objects of the folder to the Object chooser in the previous tab.
+The final tab is the Tileset and Project tab, it is made out of only 2 buttons, the _Import Tileset_ and _Import Objects_ button, that both open a file chooser window in where you input, respectivelly, the tile set image or the Assets/Objects directory of a himawari project. It will import all the objects of the folder to the Object chooser in the previous tab, additionally there is a shortcuts button, it displays an image with all the map editor shortcuts illustrated for quick use, like moving around, zooming and placing tiles.
+
+
 
 last edited: **Sagiri on 12/10/2022**
 last edited: **Sagiri on 22/10/2022**

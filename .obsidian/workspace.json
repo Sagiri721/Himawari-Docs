@@ -4,13 +4,14 @@
     "type": "split",
     "children": [
       {
-        "id": "3acd51735455e12c",
+        "id": "ac1f64254146462f",
         "type": "tabs",
         "children": [
           {
-            "id": "c8232ba1e6f86d7e",
+            "id": "bf75750f9d98c4b2",
             "type": "leaf",
             "state": {
+<<<<<<< HEAD
               "type": "markdown",
               "state": {
                 "file": "Animation.md",
@@ -29,6 +30,10 @@
                 "mode": "source",
                 "source": false
               }
+=======
+              "type": "empty",
+              "state": {}
+>>>>>>> 56e42bf727826973eabc3e5c9baece0094a42538
             }
           }
         ]
@@ -97,7 +102,10 @@
             "state": {
               "type": "backlink",
               "state": {
+<<<<<<< HEAD
                 "file": "Animation.md",
+=======
+>>>>>>> 56e42bf727826973eabc3e5c9baece0094a42538
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +122,10 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+<<<<<<< HEAD
                 "file": "Animation.md",
+=======
+>>>>>>> 56e42bf727826973eabc3e5c9baece0094a42538
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -136,9 +147,13 @@
             "type": "leaf",
             "state": {
               "type": "outline",
+<<<<<<< HEAD
               "state": {
                 "file": "Animation.md"
               }
+=======
+              "state": {}
+>>>>>>> 56e42bf727826973eabc3e5c9baece0094a42538
             }
           },
           {
@@ -155,6 +170,7 @@
     "direction": "horizontal",
     "width": 259.5
   },
+<<<<<<< HEAD
   "active": "c8232ba1e6f86d7e",
   "lastOpenFiles": [
     "Sprites.md",
@@ -167,5 +183,19 @@
     "images/editor 1.png",
     "Pasted image 20221118200604.png",
     "2022-10-22.md"
+=======
+  "active": "bf75750f9d98c4b2",
+  "lastOpenFiles": [
+    "Sprites.md",
+    "Input.md",
+    "README.md",
+    "Objects.md",
+    "Rooms.md",
+    "Animation.md",
+    "images/tab2.png",
+    "object.md",
+    "images/editor 1.png",
+    "Pasted image 20221118200604.png"
+>>>>>>> 56e42bf727826973eabc3e5c9baece0094a42538
   ]
 }
