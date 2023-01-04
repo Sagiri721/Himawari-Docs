@@ -1,4 +1,4 @@
-# Create a map
+# Create a room
 
 ## Tile sets
 
@@ -34,7 +34,7 @@ The room tiles file has information on what tiles should be placed where:
 The room above is 5 tiles long and 3 tiles high, it goes to the referenced tile set object and gets the image of the mentioned index to draw it in it's position on the file.
 
 ### room-objects
-The room objects file has information on what objects should be placed and where. It would be boring and result in messy code if all the objects off the room where to be instatiated manually, so this file takes all the information on position, rotation, and scaling of the objects that should be placed on the room beforehand.<br>Format: ``` Wall 80-10 90 1-1```
+The room objects file has information on what objects should be placed and where. It would be boring and result in messy code if all the objects off the room where to be instatiated manually, so this file takes all the information on position, rotation, and scaling of the objects that should be placed on the room beforehand, it can also be given an object name as an optional 4th parameter.<br>Format: ``` Wall 80-10 90 1-1 Wall1```
 
 Optionally a 4th parameter may be given, the [object](Objects) name, it's name is attributed to the object once it's created to avoid "Name already attributed to a different object" warnings when compiling.
 
