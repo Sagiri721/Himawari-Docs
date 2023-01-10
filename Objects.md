@@ -53,7 +53,47 @@ Or to use the static method _DestroyObject_ that destroys a certain object of na
 Object.DestroyObject("Wall0");
 ```
 
+### Object properties
+
+All Himawari objects have attributes that define it's properties a part of the game and can be changed to create different types of interactions.
+
+Name | Methods | Functionality
+--------------|:-----------:|------------
+Name | setName("Player") | Unique identifier of object 
+Tag | setTag("Collision") | Groups objects by whatever criteria the programmer see's fit
+Layer | setLayer(12) | A higher layer means the object will be rendered first than other objects with a lower layer
+Active | setActive(false) | An inactive object's Update will not be called
+Component(s) | addComponent(component) | A component is a scriptable piece of code that directly applies methodology and functionality to a Himawari object 
+
+To find objects by their attributes there are a number of functions.
+```java
+//Find object by name
+Object obj = Object.FindObject("Controller");
+obj.setLayer(obj.getLayer() - 1);
+
+if(obj.getLayer() <= 4){
+
+	obj.setActive(false);
+}
+
+//Find list of objects with a certain tag
+List<Object> enemies = Object.GetObjectsWithTag("Enemy");
+Debugging.drawText("There are " + enemies.size() + " enemies left", 5, 5, g);
+```
+
+## Components
+
+Components are a piece of code that inherits the Component super class, this files can be appended to a Himawari object as a general foundation to build upon and create repeatable game mechanics, the are default components, the components you create, and plugin components that other developers have made for the community to use.
+The default components that you should know of for a basic use of the engine are:
+* Transform
+* ImageRenderer
+* Animator ([[Animation]])
+* RectCollider
+* Body
+Each important component should be properly document, check their respective doc pages for more use information.
+
 ## StdBehaviour interface
+
 All objects should implement the "Standard Behaviour" interface, that interface defines all the methods that should be common to all game objects, namely: 
 * Start
 * Update
@@ -62,7 +102,7 @@ All objects should implement the "Standard Behaviour" interface, that interface 
 * GetBehaviour
 All functions **but GetBehaviour** can be programmed to fit the developer's needs, dependent on the situation.
 
-****Start** will be called after the object is instantiated;
+***Start** will be called after the object is instantiated;
 **Update** will be called once every time the object is rendered, it receives the _delta_ argument, also known as delta time, is the time inbetween frames calculated on every update tick;
 **DrawGUI** will also be called when the object is rendered, it must be used to draw graphics on the screen freelly with the java.awt library, it receives a Graphics2D object.
 **ReceiveMessage** is called once a certain object is targeted as a message receiver, it receives a message
@@ -116,6 +156,7 @@ Object player = Object.find("Player");
 player.attribute = "new value"
 ```
 
+edited: **Sagiri on 10/01/2023**
 edited: **Sagiri on 20/10/2022**
 edited: **Sagiri on 22/10/2022**
 edited: **Sagiri on 09/12/2022**

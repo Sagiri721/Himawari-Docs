@@ -17,6 +17,7 @@ TileSet tileset = new TileSet(tileSheet, 16, 16);
 ```
 
 ## Rooms
+
 Rooms are where your object are placed in, they contain information on the placement of tiles and object spawning, you can make a game without a Room.
 
 A room **must** be placed inside the Rooms folder in assets and each room has it's own folder with it's name.
@@ -34,9 +35,10 @@ The room tiles file has information on what tiles should be placed where:
 The room above is 5 tiles long and 3 tiles high, it goes to the referenced tile set object and gets the image of the mentioned index to draw it in it's position on the file.
 
 ### room-objects
-The room objects file has information on what objects should be placed and where. It would be boring and result in messy code if all the objects off the room where to be instatiated manually, so this file takes all the information on position, rotation, and scaling of the objects that should be placed on the room beforehand, it can also be given an object name as an optional 4th parameter.<br>Format: ``` Wall 80-10 90 1-1 Wall1```
+The room objects file has information on what objects should be placed and where. It would be boring and result in messy code if all the objects off the room where to be instatiated manually, so this file takes all the information on position, rotation, and scaling of the objects that should be placed on the room beforehand.
+Format: ``` Wall 80-10 90 1-1 Wall1```
 
-Optionally a 4th parameter may be given, the [object](Objects) name, it's name is attributed to the object once it's created to avoid "Name already attributed to a different object" warnings when compiling.
+Optionally a 4th and 5th parameter may be given, the [object](Objects) name, it's name is attributed to the object once it's created to avoid "Name already attributed to a different object" warnings when compiling, the 5th parameter is the object's parent's name, it must be the name of an object that will be instantiated when the room loads or was already instantiated before loading the room, as it will not exist otherwise.
 
 The line above instantiates an object of name "Wall" in the coordinates x=80 y= 10 rotated 90 degrees and with a scaling of x=1 y=1
 
@@ -48,6 +50,7 @@ room0.loadObjects();
 ``` 
 
 ## Create a room
+
 ```java
 Sprite tileSheet = new Sprite("tiles.png");
 TileSet tileSet = new TileSet(tileSheet, 16, 16);
@@ -56,11 +59,12 @@ new Room("fields", tileSet, new RoomData("room0"));
 ```
 
 ## Load Rooms
+
 The first Room ever added is considered the "startRoom" (RoomHandler.java line 14) it's the first Room to load when the game starts. Rooms can be changed using the roomGoto function, to go to a certain Room it must have been added to the room list first. Rooms are added to that list once their  constructor is called. 
 
 ```java
 Room castle = new Room("castle", tileSet, new RoomData("room_castle"));
-RoomHandler.roomGoto(castle);
+LoadRoom(castle);
 ```
 
 # Create a Room using HimawariGUI
