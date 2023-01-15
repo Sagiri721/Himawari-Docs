@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "85f30ec36d61c909",
+        "id": "a83adf02cb8b7107",
         "type": "tabs",
         "children": [
           {
-            "id": "ca1fc030e8c29e84",
+            "id": "5dbfa772b84cd713",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Objects.md",
+                "file": "Widgets and Debug.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Objects.md",
+                "file": "Widgets and Debug.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Objects.md",
+                "file": "Widgets and Debug.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,12 +125,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Objects.md"
+                "file": "Widgets and Debug.md"
               }
             }
           },
           {
-            "id": "a8094fea92422eef",
+            "id": "50a66d6966dac056",
             "type": "leaf",
             "state": {
               "type": "calendar",
@@ -141,7 +141,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 259.5
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -154,17 +154,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ca1fc030e8c29e84",
+  "active": "5dbfa772b84cd713",
   "lastOpenFiles": [
-    "Animation.md",
-    "Objects.md",
-    "Geometry.md",
-    "Input.md",
-    "README.md",
+    "images/tileset.png.md",
     "Rooms.md",
-    "Sound.md",
-    "Sprites.md",
-    "().md",
-    "images/tab2.png"
+    "2022-10-12.md"
   ]
 }
