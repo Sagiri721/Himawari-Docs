@@ -1,11 +1,11 @@
 # Sound
 
 The Himawari2D framework supports .mp3 and .wav files.
-Sound my be added to the engine files via the Sounds folder.
+Sound may be added to the engine files via the Sounds folder.
 
 ## Instantiate sound object
 
-To create a sound object you need to pass in the name of the file and if the sound will loop or not.
+To create a sound object, you need to pass in the name of the file and if the sound will loop or not.
 ```java
 Sound sound = new Sound("mysong.wav", true);
 ```

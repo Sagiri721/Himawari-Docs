@@ -1,0 +1,1 @@
+The first step to work with Himawari2D is installing the engine, and the HimawariGUI application.

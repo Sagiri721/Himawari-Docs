@@ -1,10 +1,10 @@
 # Create animation from sprite sheet
 To create an animation the first step is to get the sprite sheet of the animation, that is, a big picture that contains every frame. In the current framework version 1.0.3, multiple line sprite sheets are not supported.
 Example of a sprite sheet:
-![spritesheet](images/miniwalk.png)
+![spritesheet](miniwalk.png)
 
 This type of image is interpreted as an array of buffered images.
-The animation data type stores all the frames of a sprite sheet, to create an animation use the static method: _[Sprite](Sprites).createAnimation_
+The animation data type stores all the frames of a sprite sheet, to create an animation use the static method: _[Sprite](Sprites.md).createAnimation_
 ```java
 Sprite image = new Sprite("mini idle.png");
 Animation walk = Sprite.createAnimation(image, 64, 64, 0, 0, true);

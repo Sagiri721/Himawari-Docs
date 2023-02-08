@@ -8,9 +8,12 @@ It features:
 * Tutorials on how to create the game templates;
 
 ## Navigation
-
 Easy access to basic game file documentation:
-[[Sprites]]
-[[Objects]]
-[[Rooms]]
-[[Input]]
+What do you want to learn?
+[[Sprites]] | [[Objects]] | [[Rooms]] | [[Input]] | [[Fonts]] | [[Storage]] 
+[[Components]] | [[Get started with plugins]]
+
+## Get Started
+New user: [[Installing]] | Beginner: [[Creating a project]]
+Basics: [[00 - Pong clone]] | Practice: [[01 - Stepmania clone]]
+
