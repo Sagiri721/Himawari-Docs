@@ -31,4 +31,11 @@ public void Update(float deltaTime) {
 }
 ```
 
-last edited: **Sagiri on 29/11/2022**
+## Audio gain
+
+You can change the audio volume using the static functions _setGlobalGain_ in the followijng way:
+```java
+Sound.setGlobalGain(-20);
+```
+The above code will change the volume gain by -20 decibels, making it quieter.
+last edited: **Sagiri on 17/04/2023**

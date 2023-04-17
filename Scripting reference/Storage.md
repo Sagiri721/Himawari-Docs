@@ -32,7 +32,7 @@ if(Storage.get("score").getValue() < score){
 ```
 
 ## Clusters
-There may be situations where a key-value pair is not enough to store all the information conveniently, like when we need to store a 4 value RGBA color, or an X Y position, to create those data structures you may use clusters.
+There may be situations where a key-value pair is not enough to store all the information conveniently, like when we need to store a 4 value RGBA colour, or an X Y position, to create those data structures you may use clusters.
 
 They can be created with a name and a capacity.
 

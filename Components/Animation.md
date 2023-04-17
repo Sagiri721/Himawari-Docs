@@ -37,7 +37,4 @@ animator.imageSpeed = 0.01f; //fast
 animator.imageSpeed = 3f; //slow
 ```
 
-## Animation Triggers
-
-
 last edited: **Sagiri on 13/10/2022**
