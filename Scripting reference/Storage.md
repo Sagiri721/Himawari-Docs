@@ -39,3 +39,5 @@ They can be created with a name and a capacity.
 ```java
 Storage.CreateCluster("name", 4);
 ```
+
+last edited: **10/01/2023**

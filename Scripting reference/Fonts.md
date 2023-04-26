@@ -20,3 +20,5 @@ FontMap map = new FontMap("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
 Font font = new Font(0, 0, true, map);
 ```
+
+last edited: **10/01/2023**

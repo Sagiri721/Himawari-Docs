@@ -41,4 +41,4 @@ These values may be adjusted in the project settings.
 Vec2 movement = new Vec2(Input.axisX, Input.axisY);
 ```
 
-last edited: **Sagiri on 09/12/2022**
+last edited: **09/12/2022**

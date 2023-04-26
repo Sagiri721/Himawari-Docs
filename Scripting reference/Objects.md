@@ -156,7 +156,4 @@ Object player = Object.find("Player");
 player.attribute = "new value"
 ```
 
-edited: **Sagiri on 10/01/2023**
-edited: **Sagiri on 20/10/2022**
-edited: **Sagiri on 22/10/2022**
-edited: **Sagiri on 09/12/2022**
+edited: **09/12/2022**

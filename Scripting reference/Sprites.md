@@ -36,4 +36,4 @@ ImageUtil is a separate class that is meant for both the engine and the programm
 | flipImageVertical | flips ans image vertically |    the flipped image | sprite: The original BufferedImage; |
 | rotate | rotates an image | original image rotated by a certain angle | bimg: The original BufferedImage; angle: the amount in degrees to rotate; |
 
-last edited: **Sagiri on 22/10/2022**
+last edited: **22/10/2022**

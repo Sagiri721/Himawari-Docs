@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Components/Physics.md",
+                "file": "Scripting reference/Widgets and Debug.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Components/Physics.md",
+                "file": "Scripting reference/Widgets and Debug.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Components/Physics.md",
+                "file": "Scripting reference/Widgets and Debug.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Components/Physics.md"
+                "file": "Scripting reference/Widgets and Debug.md"
               }
             }
           },
@@ -145,15 +145,15 @@
   },
   "active": "24030666bf862b4e",
   "lastOpenFiles": [
-    "Components/Image rendering.md",
-    "Components/Components.md",
+    "Scripting reference/Storage.md",
+    "Scripting reference/Fonts.md",
+    "Scripting reference/Objects.md",
+    "Scripting reference/Rooms.md",
+    "Scripting reference/Sprites.md",
+    "Scripting reference/Sound.md",
+    "Scripting reference/Input.md",
+    "Scripting reference/Geometry.md",
     "Components/Physics.md",
-    "Components/Transform.md",
-    "Components/Collision.md",
-    "Components/Animation.md",
-    "Working with Himawari2D/Creating a project.md",
-    "Working with Himawari2D/Installing.md",
-    "README.md",
-    "Tutorials/00 - Pong clone.md"
+    "Plugins/Get started with plugins.md"
   ]
 }

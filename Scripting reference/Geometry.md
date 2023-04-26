@@ -34,4 +34,4 @@ The **Contains** and the **Intersects**.
 
 ![shapes](shapes.png)
 
-last edited: **Sagiri on 10/01/2023**
+last edited: **10/01/2023**

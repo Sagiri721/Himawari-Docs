@@ -38,4 +38,4 @@ You can change the audio volume using the static functions _setGlobalGain_ in th
 Sound.setGlobalGain(-20);
 ```
 The above code will change the volume gain by -20 decibels, making it quieter.
-last edited: **Sagiri on 17/04/2023**
+last edited: **17/04/2023**
