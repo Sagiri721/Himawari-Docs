@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Components/Image rendering.md",
+                "file": "Components/Physics.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Components/Image rendering.md",
+                "file": "Components/Physics.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Components/Image rendering.md",
+                "file": "Components/Physics.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Components/Image rendering.md"
+                "file": "Components/Physics.md"
               }
             }
           },
@@ -145,10 +145,10 @@
   },
   "active": "24030666bf862b4e",
   "lastOpenFiles": [
-    "Components/Physics.md",
-    "Components/Transform.md",
     "Components/Image rendering.md",
     "Components/Components.md",
+    "Components/Physics.md",
+    "Components/Transform.md",
     "Components/Collision.md",
     "Components/Animation.md",
     "Working with Himawari2D/Creating a project.md",

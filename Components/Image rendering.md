@@ -30,3 +30,5 @@ renderer.scaleSprite(
 	ImageRenderer.scaleAlgorithm.SMOOTH
 );
 ```
+
+last edited: **24/04/2023**
