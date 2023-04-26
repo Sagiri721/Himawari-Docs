@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Components/Collision.md",
+                "file": "Components/Image rendering.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Components/Collision.md",
+                "file": "Components/Image rendering.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Components/Collision.md",
+                "file": "Components/Image rendering.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Components/Collision.md"
+                "file": "Components/Image rendering.md"
               }
             }
           },
@@ -145,15 +145,15 @@
   },
   "active": "24030666bf862b4e",
   "lastOpenFiles": [
-    "Components/Animation.md",
-    "Components/Collision.md",
-    "Components/Transform.md",
     "Components/Physics.md",
+    "Components/Transform.md",
     "Components/Image rendering.md",
     "Components/Components.md",
-    "Plugins/Get started with plugins.md",
-    "Working with Himawari2D/Installing.md",
+    "Components/Collision.md",
+    "Components/Animation.md",
     "Working with Himawari2D/Creating a project.md",
-    "Tutorials/03 - Touhou clone.md"
+    "Working with Himawari2D/Installing.md",
+    "README.md",
+    "Tutorials/00 - Pong clone.md"
   ]
 }

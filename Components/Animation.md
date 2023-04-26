@@ -37,4 +37,4 @@ animator.imageSpeed = 0.01f; //fast
 animator.imageSpeed = 3f; //slow
 ```
 
-last edited: **Sagiri on 13/10/2022**
+last edited: **13/10/2022**
