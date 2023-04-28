@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "24030666bf862b4e",
+            "id": "188c2edf64b7c13e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Scripting reference/Widgets and Debug.md",
+                "file": "Components/Transform.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Scripting reference/Widgets and Debug.md",
+                "file": "Components/Transform.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Scripting reference/Widgets and Debug.md",
+                "file": "Components/Transform.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Scripting reference/Widgets and Debug.md"
+                "file": "Components/Transform.md"
               }
             }
           },
@@ -143,17 +143,17 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "24030666bf862b4e",
+  "active": "188c2edf64b7c13e",
   "lastOpenFiles": [
-    "Scripting reference/Storage.md",
-    "Scripting reference/Fonts.md",
-    "Scripting reference/Objects.md",
-    "Scripting reference/Rooms.md",
-    "Scripting reference/Sprites.md",
-    "Scripting reference/Sound.md",
-    "Scripting reference/Input.md",
-    "Scripting reference/Geometry.md",
     "Components/Physics.md",
-    "Plugins/Get started with plugins.md"
+    "Components/Transform.md",
+    "Components/Components.md",
+    "Scripting reference/Fonts.md",
+    "README.md",
+    "Tutorials/02 - Touhou clone.md",
+    "Scripting reference/Geometry.md",
+    "Tutorials/01 - Stepmania clone.md",
+    "Tutorials/01 - Super mario clone.md",
+    "Scripting reference/Widgets and Debug.md"
   ]
 }

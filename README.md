@@ -10,10 +10,9 @@ It features:
 ## Navigation
 Easy access to basic game file documentation:
 What do you want to learn?
-[[Sprites]] | [[Objects]] | [[Rooms]] | [[Input]] | [[Fonts]] | [[Storage]] 
-[[Components]] | [[Get started with plugins]]
+[[Sprites]] | [[Objects]] | [[Rooms]] | [[Input]] | [[Fonts]] | [[Storage]] | [[Components]] 
 
 ## Get Started
 New user: [[Installing]] | Beginner: [[Creating a project]]
-Basics: [[00 - Pong clone]] | Practice: [[01 - Stepmania clone]]
+Basics: [[00 - Pong clone]] | Practice: [[01 - Super mario clone]]
 

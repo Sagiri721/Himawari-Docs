@@ -25,4 +25,14 @@ public class MyCoolComponent extends Component{
 
 You may add any needed methods and those will be called like normal.
 
+## Default engine components
+
+When creating a Himawari2D project the following component's will be automatically added to your project:
+* [[Transform]]
+* [[Image rendering]]
+* [[Collision]]
+* [[Animation]]
+* [[Physics]]
+* Camera
+
 last edited: **24/04/2023**
