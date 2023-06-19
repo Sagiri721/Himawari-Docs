@@ -10,7 +10,7 @@ A sprite can also be created directly from a Buffered Image object.
 
 ## Get sprite from sprite sheet
 There is a special constructor to extract an image from a sprite sheet, it receives an image, a start x position, a start y position, a width and a height.
-![image](player.png)
+![image](images/player.png)
 To get the selected image, keeping in mind each cell has 64 pixels, the following constructor should be called:
 ```java
 Sprite player = new Sprite("player.png", 0, 0, 64, 64);
@@ -18,7 +18,7 @@ Sprite player = new Sprite("player.png", 0, 0, 64, 64);
 
 ## Default sprites
 For testing purposes there are provided 4 default sprites for testing and to serve as placeholders, and these are:
-![image](default-sprites.png)
+![image](images/default-sprites.png)
 They can be instantiated with their respective index:
 ```java
 Sprite player = new Sprite(0); // Square

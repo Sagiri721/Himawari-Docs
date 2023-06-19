@@ -1,0 +1,7 @@
+The application's homepage serves as an entry portal to Himawari2D development. It features a small welcome section with three informative tabs: a software version list for both the main page and the map editor, an information tab about the project on GitHub and useful links, and a brief news tab.
+
+![Pasted image 20230608193406.png](images/Pasted%20image%2020230608193406.png)
+
+The main page of the application acts as a portal to all of its functions. Since most of the application's functions are contained within the project management window, the main page only has three menus, each with a few options. There's a project control menu that allows for creating and opening projects through the computer's file system, a map control menu that enables the creation of independent maps unrelated to a specific project, and an account control menu that allows logging into the application. This login is effectively connected to a remote MongoDB database.
+
+The entered login information is then compared with the information received from a web request to the database. If the entered login is valid, the user's information will be stored in a JSON file and used as needed. If the credentials are incorrect, the login will be rejected.

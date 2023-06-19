@@ -1,0 +1,1 @@
+The help section is a section at the bottom of the editor with several buttons for quickly performing actions. These actions include opening the application's website directly, accessing the engine's documentation, closing the editor, checking for software updates, and running the game itself.

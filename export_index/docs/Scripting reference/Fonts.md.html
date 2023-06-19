@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/go.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<style>
+	img { max-width:900px; }
+	.codeblock { 
+	background: #B0B0B0; padding:1px 10px 0px 10px; border-radius: 5px; overflow-x:auto; 
+	}
+	code {
+ font-family: monospace; font-size: inherit; color: #202020; 
+	}
+	.inlineCoed {
+ font-family: monospace; font-size: inherit; color: #202020; 
+	}
+</style>
+</head>
+<body style="background: #F0F0F0;">
+<div style="margin: 0 auto; width:1380px;  position: relative;" >
+<div style="width:1000px; padding:20px; margin:0px; z-index: 5; text-align:left; background-color: #DCDCDC; border-radius: 5px; position:absolute; top:0; left:340px;">
+<h1 style="margin-left:0px;" id="Fonts">Fonts</h1>
+<h2 style="margin-left:0px;" id="True_type_fonts">True type fonts</h2>
+<p></p>
+<p>True type fonts are fonts that come from a font file like OTF, WOFF, TTF etc...</p>
+<p>To intialize a true type font you'll only need the name of the file and the size of the font, like shown bellow:</p>
+<pre class="codeblock"><code style="tab-size: 4;" class="java codeblock">java
+Font font = new Font(&quot;Verdana.ttf&quot;, 15);
+</pre></code>
+<p></p>
+<h2 style="margin-left:0px;" id="Image_fonts">Image fonts</h2>
+<p></p>
+<p>Image fonts are fonts that come from a tileset like following:</p>
+<p><img src="./images/tile1.png" alt="tile1.png" style="border-radius: 4px;"" ></p>
+<p></p>
+<p>To initialize an image font you will need a FontMap object, a start x and start y position, a boolean flag and the order of the characters.</p>
+<p>The example bellow is a representation of how to turn the image above int an image font.</p>
+<pre class="codeblock"><code style="tab-size: 4;" class="java codeblock">java
+TileSet tileset = new TileSet(new Sprite(&quot;tiles.png&quot;), 16,16);
+FontMap map = new FontMap(&quot;abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;, tileset);
+
+Font font = new Font(0, 0, true, map);
+</pre></code>
+<p></p>
+<p>last edited: <b>10/01/2023</b></p>
+</div>
+<div style="width:345px; padding-top: 20px;; position:absolute; top:0; left:0; overflow:auto;">
+	<iframe src="../../treeview.html" width="340px" frameBorder="0" height="900px"></iframe>
+</div>
+</div>
+</body>
+</html>

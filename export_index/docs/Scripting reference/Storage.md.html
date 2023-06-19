@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/go.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<style>
+	img { max-width:900px; }
+	.codeblock { 
+	background: #B0B0B0; padding:1px 10px 0px 10px; border-radius: 5px; overflow-x:auto; 
+	}
+	code {
+ font-family: monospace; font-size: inherit; color: #202020; 
+	}
+	.inlineCoed {
+ font-family: monospace; font-size: inherit; color: #202020; 
+	}
+</style>
+</head>
+<body style="background: #F0F0F0;">
+<div style="margin: 0 auto; width:1380px;  position: relative;" >
+<div style="width:1000px; padding:20px; margin:0px; z-index: 5; text-align:left; background-color: #DCDCDC; border-radius: 5px; position:absolute; top:0; left:340px;">
+<h1 style="margin-left:0px;" id="Storage">Storage</h1>
+<p>The storage class is used to store data from the game permanently, data that can be accessed again when the game is booted a next time. Keep in mind that this data is stored between sessions of the game in the same machine, but it will not store data across multiple clients, so it is not suited for online games.</p>
+<p></p>
+<h2 style="margin-left:0px;" id="Saving_data">Saving data</h2>
+<p>In the storage, data is stored as key-value pairs, much like in a Hash Map.</p>
+<p>To update data already in the storage, you can also use the _put_ method.</p>
+<pre class="codeblock"><code style="tab-size: 4;" class="java codeblock">java
+// This will create a storage space that stores the value inside the points value
+Storage.put(&quot;score&quot;, points);
+</pre></code>
+<p></p>
+<p>If space is a concern, to erase data from the storage the _flush_ method can be used, it will erase a specific pair from the storage.</p>
+<pre class="codeblock"><code style="tab-size: 4;" class="java codeblock">java
+Storage.flush(&quot;score&quot;);
+</pre></code>
+<p></p>
+<p>To erase all the data stored, the _clear_ method may be used.</p>
+<p></p>
+<h2 style="margin-left:0px;" id="Getting_data">Getting data</h2>
+<p>To retrieve the data stored, the get method can be used, it returns a *Pair<>* value, with the key being the status and the value being the value.</p>
+<p>There are five different status:</p>
+<p>* VALUE</p>
+<p>* EMPTY</p>
+<p>* UNIDENTIFIABLE</p>
+<p>* SUCCESS</p>
+<p>* ERROR</p>
+<p></p>
+<pre class="codeblock"><code style="tab-size: 4;" class="java codeblock">java
+if(Storage.get(&quot;score&quot;).getValue() &lt; score){
+	Storage.put(&quot;score&quot;, score);
+}
+</pre></code>
+<p></p>
+<h2 style="margin-left:0px;" id="Clusters">Clusters</h2>
+<p>There may be situations where a key-value pair is not enough to store all the information conveniently, like when we need to store a 4 value RGBA colour, or an X Y position, to create those data structures you may use clusters.</p>
+<p></p>
+<p>They can be created with a name and a capacity.</p>
+<p></p>
+<pre class="codeblock"><code style="tab-size: 4;" class="java codeblock">java
+Storage.CreateCluster(&quot;name&quot;, 4);
+</pre></code>
+<p></p>
+<p>last edited: <b>10/01/2023</b></p>
+</div>
+<div style="width:345px; padding-top: 20px;; position:absolute; top:0; left:0; overflow:auto;">
+	<iframe src="../../treeview.html" width="340px" frameBorder="0" height="900px"></iframe>
+</div>
+</div>
+</body>
+</html>

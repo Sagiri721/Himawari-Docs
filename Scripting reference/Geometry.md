@@ -20,7 +20,7 @@ myVec.setValues(10, myVec.y);
 ```
 2D vectors support a number of mathematical and logical functions, namely: sum, subtraction, multiplication, division, absolute vector, invert, magnitude and value clamping.
 
-![vectors](vectors.png)
+![vectors](images/vectors.png)
 
 ## Rectangles & Circles
 
@@ -32,6 +32,6 @@ Circle circle = new Circle(rect.x, rect.y, 30);
 Both of these support the basic Shape interface functions.
 The **Contains** and the **Intersects**.
 
-![shapes](shapes.png)
+![shapes](images/shapes.png)
 
 last edited: **10/01/2023**

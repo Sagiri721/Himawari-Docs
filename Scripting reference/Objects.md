@@ -112,7 +112,7 @@ All functions **but GetBehaviour** can be programmed to fit the developer's need
 The hierarchy is a way to relate objects to each other and make them inherit a parent's raw movement and help with quick searching objects and grouping them.
 Here is an example of how the relation works:
 
-![image](childs.png)
+![image](images/childs.png)
 
 All three basic translation functions are transmitted from parent to child, horizontal and vertical movement, rotation and scaling.
 Moving a child will not affect a parent's tranform functions, as they are relative to the parent and not dependant. Once a child moves, it's position changes relatively from the parent. These behaviour can be stopped by setting the parameter Node.connected to false.

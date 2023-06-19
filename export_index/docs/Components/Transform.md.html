@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/go.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<style>
+	img { max-width:900px; }
+	.codeblock { 
+	background: #B0B0B0; padding:1px 10px 0px 10px; border-radius: 5px; overflow-x:auto; 
+	}
+	code {
+ font-family: monospace; font-size: inherit; color: #202020; 
+	}
+	.inlineCoed {
+ font-family: monospace; font-size: inherit; color: #202020; 
+	}
+</style>
+</head>
+<body style="background: #F0F0F0;">
+<div style="margin: 0 auto; width:1380px;  position: relative;" >
+<div style="width:1000px; padding:20px; margin:0px; z-index: 5; text-align:left; background-color: #DCDCDC; border-radius: 5px; position:absolute; top:0; left:340px;">
+<p>The transform component applies spatial properties to an object, defining it's position, rotation and scale.</p>
+<p>Every object has a transform component by default.</p>
+<p></p>
+<h2 style="margin-left:0px;" id="Moving_across_the_screen">Moving across the screen</h2>
+<p></p>
+<p>To move an object we use it's transform component, there are two different ways to translate an object's position:</p>
+<p></p>
+<pre class="codeblock"><code style="tab-size: 4;" class="java codeblock">java
+//This will move an object 1 pixel to the right ignoring any objects that it may come into contact with
+transform.translate(new Vec2(1, 0));
+</pre></code>
+<p></p>
+<pre class="codeblock"><code style="tab-size: 4;" class="java codeblock">java
+//This will move the object 10 pixels to the right, but if the given collider comes into collision with another object, the movement will be canceled
+transform.translate(new Vec2(10, 0), (RectCollider) getComponent(RectCollider.class));
+</pre></code>
+<p></p>
+<h2 style="margin-left:0px;" id="Rotating_an_object">Rotating an object</h2>
+<p></p>
+<p>To change an object's rotation, you can use the _Transform.rotate(float)_ method.</p>
+<p></p>
+<pre class="codeblock"><code style="tab-size: 4;" class="java codeblock">java
+//The input should be in degrees and between 0 and 360
+transform.rotate(10f);
+
+//When the input overflows the maximum value od 360, the applied rotation will be of value - 360 * n
+transform.rotate(380f);
+</pre></code>
+<p></p>
+<p>Another way to rotate an object in a known direction is using the _Transform.lookAt(Object)_ method, this method will calculate the necessary angle to be facing another object and apply it.</p>
+<p></p>
+<pre class="codeblock"><code style="tab-size: 4;" class="java codeblock">java
+Object target = Object.FindObject(&quot;player&quot;);
+transform.lookAt(target);
+</pre></code>
+<p></p>
+<h2 style="margin-left:0px;" id="Scaling_an_object">Scaling an object</h2>
+<p></p>
+<p>To definine the scale of an object, the setter _Transform.setScale(Vec2)_ may be called:</p>
+<p></p>
+<pre class="codeblock"><code style="tab-size: 4;" class="java codeblock">java
+transform.setScale(new Vec2(2,1));
+
+//Or
+transform.setScale(2, 1);
+</pre></code>
+<p></p>
+<p>last edited: <b>28/04/2023</b></p>
+</div>
+<div style="width:345px; padding-top: 20px;; position:absolute; top:0; left:0; overflow:auto;">
+	<iframe src="../../treeview.html" width="340px" frameBorder="0" height="900px"></iframe>
+</div>
+</div>
+</body>
+</html>

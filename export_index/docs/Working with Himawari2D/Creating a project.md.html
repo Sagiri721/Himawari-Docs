@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/go.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<style>
+	img { max-width:900px; }
+	.codeblock { 
+	background: #B0B0B0; padding:1px 10px 0px 10px; border-radius: 5px; overflow-x:auto; 
+	}
+	code {
+ font-family: monospace; font-size: inherit; color: #202020; 
+	}
+	.inlineCoed {
+ font-family: monospace; font-size: inherit; color: #202020; 
+	}
+</style>
+</head>
+<body style="background: #F0F0F0;">
+<div style="margin: 0 auto; width:1380px;  position: relative;" >
+<div style="width:1000px; padding:20px; margin:0px; z-index: 5; text-align:left; background-color: #DCDCDC; border-radius: 5px; position:absolute; top:0; left:340px;">
+<p>The project creator is the most important tool on the homepage. It provides the necessary tools for dynamically creating projects. Manual creation of customized projects can be tedious and time-consuming, so a script was developed to automate the project creation process. Himawari2D projects are essentially Java Maven projects with various Java files that make up the engine, as illustrated in Chapter 6. However, these files are relative and need to be modified depending on various factors. The main purpose of the project creator is to simplify the process of factoring these files and provide other utilities such as the creation of useful objects and templates.</p>
+<p></p>
+<p>Below is an illustration of the project creation interface. It has a "Create Project" button that triggers the previously described process, an "Open Project" button that opens one of the recent projects, which are stored in a file to remember the programmer's history. Projects can be selected from the dropdown box displayed below. If no project is selected, a folder selection dialog opens to choose a project location on the computer.</p>
+<p></p>
+<p><img src="./None" alt="None" style="border-radius: 4px;"" ></p>
+<p></p>
+<p>Below the basic project control buttons, there are advanced project creation menus. The project creation settings menu consists of six checkboxes:</p>
+<p></p>
+<p>1. Add Main Object: Creates an initial empty object within the project.</p>
+<p>2. Add Configured Camera Object: Adds a 2D camera object that is ready to follow an object.</p>
+<p>3. Use Gson Library: Gson is a library that allows reading, writing, and processing JSON files.</p>
+<p>4. Use Jackson Library: Jackson is a library that enables processing of various file types, including XML.</p>
+<p>5. Use SLF4J Library: SLF4J is a simple logging library for Java, widely used for creating references to the game's output and identifying runtime issues.</p>
+<p>6. Use JBullet Library: JBullet is a powerful library supported by various languages that enables realistic physics simulation. While Himawari2D supports physics simulation as mentioned in Chapter 6.5, it may be too basic for certain projects.</p>
+<p></p>
+<p>The other menu shown below is the template selection menu. These templates have been developed to provide programmers with a ready-to-use game base. The templates also include example projects for learning the framework, which will be explained in more detail in a future chapter.</p>
+<p></p>
+<p>The project templates are illustrated below:</p>
+<p></p>
+<p><img src="./images/Pasted image 20230608193625.png" alt="Pasted image 20230608193625.png" style="border-radius: 4px;"" ></p>
+</div>
+<div style="width:345px; padding-top: 20px;; position:absolute; top:0; left:0; overflow:auto;">
+	<iframe src="../../treeview.html" width="340px" frameBorder="0" height="900px"></iframe>
+</div>
+</div>
+</body>
+</html>

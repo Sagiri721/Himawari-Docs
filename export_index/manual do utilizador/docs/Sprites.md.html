@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/go.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<style>
+	img { max-width:900px; }
+	.codeblock { 
+	background: #B0B0B0; padding:1px 10px 0px 10px; border-radius: 5px; overflow-x:auto; 
+	}
+	code {
+ font-family: monospace; font-size: inherit; color: #202020; 
+	}
+	.inlineCoed {
+ font-family: monospace; font-size: inherit; color: #202020; 
+	}
+</style>
+</head>
+<body style="background: #F0F0F0;">
+<div style="margin: 0 auto; width:1380px;  position: relative;" >
+<div style="width:1000px; padding:20px; margin:0px; z-index: 5; text-align:left; background-color: #DCDCDC; border-radius: 5px; position:absolute; top:0; left:340px;">
+<h1 style="margin-left:0px;" id="Sprites">Sprites</h1>
+<p>Sprites are the representation of an image in game, they can be assigned to objects as it's visual representation making use of the default component ImageRenderer.</p>
+<p>To create a sprite, add an image to the Sprites folder in the Assets directory and create an object reference of the Sprite.</p>
+<p>This process should normaly take place inside an object's Start method.</p>
+<pre class="codeblock"><code style="tab-size: 4;" class="java codeblock">java
+Sprite image = new Sprite(&quot;player.png&quot;);
+</pre></code>
+<p>The most simple constructor takes a parameter the name of the file.</p>
+<p>A sprite can also be created directly from a BufferedImage object.</p>
+<p></p>
+<h2 style="margin-left:0px;" id="Get_sprite_from_spritesheet">Get sprite from spritesheet</h2>
+<p>There is a special constructor to extract an image from a spritesheet, it receives an image, a start x position, a start y position, a width and a height.</p>
+<p><img src="./../../testes do relatório/himawari/my-app/src/main/java/Assets/Sprites/player.png" alt="player.png" style="border-radius: 4px;"" ></p>
+<p>To get the selected image, keeping in mind each cell has 64 pixels, the following constructor should be called:</p>
+<pre class="codeblock"><code style="tab-size: 4;" class="java codeblock">java
+Sprite player = new Sprite(&quot;player.png&quot;, 0, 0, 64, 64);
+</pre></code>
+<p></p>
+<h2 style="margin-left:0px;" id="Default_sprites">Default sprites</h2>
+<p>For testing porpouses there are provided 4 default sprites for testing and to serve as placeholders, and these are:</p>
+<p><img src="./../../testes do relatório/himawari/my-app/src/main/java/Engine/Assets/default-sprites.png" alt="default-sprites.png" style="border-radius: 4px;"" ></p>
+<p>They can be instantiated with their respective index:</p>
+<pre class="codeblock"><code style="tab-size: 4;" class="java codeblock">java
+Sprite player = new Sprite(0); // Square
+Sprite player = new Sprite(0); // Circle
+</pre></code>
+<p></p>
+<h2 style="margin-left:0px;" id="Image_Utils">Image Utils</h2>
+<p>ImageUtil is a seperate class that is meant for both the engine and the programmer to use when it's necessary to modify an image.</p>
+<p></p>
+<p>| Function   |      Description      |  Return | Parameters |</p>
+<hr>
+<p>| resizeImage |  takes an image and resizes it to a certain desired size | The resized image | targetWidth: the desired width; targetHeigth: the desired height; al: The scaling method (scaleAlgorithm.FAST or scaleAlgorithm.SMOOTH); sprite: The original BufferedImage |</p>
+<p>| toBufferedImage |    converts the java.awt.Image format to a BufferedImage   |   The image converted | img: The originam Image object |</p>
+<p>| flipImageHorizontal | flips ans image horizontally |    the flipped image | sprite: The original BufferedImage; |</p>
+<p>| flipImageVertical | flips ans image vertically |    the flipped image | sprite: The original BufferedImage; |</p>
+<p>| rotate | rotates an image | original image rotated by a certain angle | bimg: The original BufferedImage; angle: the amount in degrees to rotate; |</p>
+<p></p>
+<p>last edited: <b>Sagiri on 22/10/2022</b></p>
+</div>
+<div style="width:345px; padding-top: 20px;; position:absolute; top:0; left:0; overflow:auto;">
+	<iframe src="../../treeview.html" width="340px" frameBorder="0" height="900px"></iframe>
+</div>
+</div>
+</body>
+</html>

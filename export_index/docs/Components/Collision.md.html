@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/go.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<style>
+	img { max-width:900px; }
+	.codeblock { 
+	background: #B0B0B0; padding:1px 10px 0px 10px; border-radius: 5px; overflow-x:auto; 
+	}
+	code {
+ font-family: monospace; font-size: inherit; color: #202020; 
+	}
+	.inlineCoed {
+ font-family: monospace; font-size: inherit; color: #202020; 
+	}
+</style>
+</head>
+<body style="background: #F0F0F0;">
+<div style="margin: 0 auto; width:1380px;  position: relative;" >
+<div style="width:1000px; padding:20px; margin:0px; z-index: 5; text-align:left; background-color: #DCDCDC; border-radius: 5px; position:absolute; top:0; left:340px;">
+<p>To establish collision between objects, both the objects that will be colliding, to create a collider the collider bounds will have to be specified, these can be the image size or a custom size.</p>
+<pre class="codeblock"><code style="tab-size: 4;" class="java codeblock">java
+RectCollider collider = new RectCollider(transform, new Vec2(32, 32));
+addComponent(collider);
+</pre></code>
+<p></p>
+<p>A collider's solidness can be disabled using the _solid_ attribute, to keep an object solid but ignore it's collision with certain objects that belong to certain tags, you may use the _ignoreTag()_ functions, all the tags that are in the ignored tag will not collide with the specific collider.</p>
+<p></p>
+<p>To check for collisions on command there are various methods that may be used, namely:</p>
+<p>* isColliding(), to check if the object is colliding with any other object.</p>
+<p>* willCollideWith(Object obj, Vec2 position), to check if given a position the collider would collide with a certain object.</p>
+<p>* willCollide(Vec2 position), to check if given a position the collider would collide with any object.</p>
+<p>* isCollidingWith(Vec2 point), to check if the object is colliding with a given point.</p>
+<p>* isCollidingWith(RectCollider collider), to check if the object is colliding with a given collider.</p>
+<p>* getCollisionArea(RectCollider collider), to get the collision area between two different colliders.</p>
+<p></p>
+<p>last edited: <b>Sagiri on 24/04/2023</b></p>
+</div>
+<div style="width:345px; padding-top: 20px;; position:absolute; top:0; left:0; overflow:auto;">
+	<iframe src="../../treeview.html" width="340px" frameBorder="0" height="900px"></iframe>
+</div>
+</div>
+</body>
+</html>

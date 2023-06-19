@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/go.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<style>
+	img { max-width:900px; }
+	.codeblock { 
+	background: #B0B0B0; padding:1px 10px 0px 10px; border-radius: 5px; overflow-x:auto; 
+	}
+	code {
+ font-family: monospace; font-size: inherit; color: #202020; 
+	}
+	.inlineCoed {
+ font-family: monospace; font-size: inherit; color: #202020; 
+	}
+</style>
+</head>
+<body style="background: #F0F0F0;">
+<div style="margin: 0 auto; width:1380px;  position: relative;" >
+<div style="width:1000px; padding:20px; margin:0px; z-index: 5; text-align:left; background-color: #DCDCDC; border-radius: 5px; position:absolute; top:0; left:340px;">
+<p>Let's make the famous old game pong!</p>
+<p>Pong is one of the first computer games that were ever created, this simple "tennis like" game features two paddles and a ball.</p>
+<p></p>
+<p><img src="./images/220px-Pong.png" alt="220px-Pong.png" style="border-radius: 4px;"" ></p>
+<p></p>
+<h2 style="margin-left:0px;" id="Setup">Setup</h2>
+<p>To start, we create a project called pong, and name our window "Pong!!", we will use the default Player object to draw the background.</p>
+<p><img src="./images/Pasted image 20230208171504.png" alt="Pasted image 20230208171504.png" style="border-radius: 4px;"" ></p>
+<p><img src="./images/Pasted image 20230208171519.png" alt="Pasted image 20230208171519.png" style="border-radius: 4px;"" ></p>
+<p></p>
+<h2 style="margin-left:0px;" id="Paddles">Paddles</h2>
+<p>The next step is to create playability, let's make the paddles that are controlled by both the player and an AI, to do that, we'll use the HimawariGUI app to create two objects named Paddle and Enemy.</p>
+<p></p>
+<p>We don't need images to draw the paddles, as they are only rectangles, so we can still use the Widget class to draw them, but as we need them to move across the screen we will make use of the <a href="./../Components/Transform.md.html">Transform</a> component, that comes by default with every object, to know where to draw the paddles.</p>
+<p></p>
+<p><img src="./images/Pasted image 20230208172633.png" alt="Pasted image 20230208172633.png" style="border-radius: 4px;"" ></p>
+<p></p>
+<p><img src="./images/Pasted image 20230208172845.png" alt="Pasted image 20230208172845.png" style="border-radius: 4px;"" ></p>
+<p></p>
+<h2 style="margin-left:0px;" id="Movement">Movement</h2>
+<p>We'll now make our paddle move, it is rather simple, as it already uses our transform component, its position is automatically updated, we just need to Translate accordingly.</p>
+<p></p>
+<p>Let's start by defining a speed variable, so it can be controlled and customized, I will set to 250, but it can be any value really, and then, we just need to Translate our transform component.</p>
+<p></p>
+<p><img src="./images/Pasted image 20230208173430.png" alt="Pasted image 20230208173430.png" style="border-radius: 4px;"" ></p>
+<p></p>
+<h2 style="margin-left:0px;" id="Ball">Ball</h2>
+<p>Now that we have a moving paddle, we need a ball to play with, let's create yet another object called ball this time. Our ball will be a white circle in the middle of the screen.</p>
+<p><img src="./images/Pasted image 20230208173851.png" alt="Pasted image 20230208173851.png" style="border-radius: 4px;"" ></p>
+<p>The ball need's a direction, so we will create a vector called direction that will start pointing at the player.</p>
+<p>Note that for this to work the ball need's to be instantiated when the player already exists.</p>
+<p><img src="./images/Pasted image 20230208180259.png" alt="Pasted image 20230208180259.png" style="border-radius: 4px;"" ></p>
+<p>Unfortunately, our ball does not bounce off the player and walls, to do that, we will need to use a <a href="./../Components/Collision.md.html">Collision</a>, a RectCollider component on both the paddles and ball.</p>
+<p><img src="./images/Pasted image 20230208172845.png" alt="Pasted image 20230208172845.png" style="border-radius: 4px;"" ></p>
+<p></p>
+<p>By using the Debugging.drawCollider feature we can debug our colliders and make sure they are of the right size.</p>
+<p><img src="./images/Pasted image 20230208181138.png" alt="Pasted image 20230208181138.png" style="border-radius: 4px;"" ></p>
+<p>Now that we know when we touch the colliders, we need to invert the ball's position, thankfully, the Vector2 class has an invert method to help us with that.</p>
+<p>When we touch the ceiling or floor, we should just invert the Y axis.</p>
+<p><img src="./images/Pasted image 20230208185519.png" alt="Pasted image 20230208185519.png" style="border-radius: 4px;"" ></p>
+<p></p>
+<h2 style="margin-left:0px;" id="Enemy">Enemy</h2>
+<p>We're almost there! Now that we have a moving ball and a moving paddle, all we need is for our opponent to catch the ball, which may seem complicated, but it's extremely easy, all we need is a reference to the ball.</p>
+<p>For this, we will need to make sure that the ball already exists when the enemy is created.</p>
+<p><img src="./images/Pasted image 20230208185127.png" alt="Pasted image 20230208185127.png" style="border-radius: 4px;"" ></p>
+<p>And now, we can directly set our Y position to be the ball's Y position.</p>
+<p><img src="./images/Pasted image 20230208185237.png" alt="Pasted image 20230208185237.png" style="border-radius: 4px;"" ></p>
+<h2 style="margin-left:0px;" id="Drawing_the_score">Drawing the score</h2>
+<p>Now that all the basic mechanics work, all we need to do is display the score and make a "Game Over" screen.</p>
+<p>To do that, we'll go back to the player object and use that to draw the score as a static variable.</p>
+<p><img src="./images/Pasted image 20230208191141.png" alt="Pasted image 20230208191141.png" style="border-radius: 4px;"" ></p>
+<p><img src="./images/Pasted image 20230208191330.png" alt="Pasted image 20230208191330.png" style="border-radius: 4px;"" ></p>
+<p><img src="./images/Pasted image 20230208191319.png" alt="Pasted image 20230208191319.png" style="border-radius: 4px;"" ></p>
+<p>Now we increase the score every time the ball is hit.</p>
+<p>To make a "Game Over" screen, we need to check if the ball's X position is lower that zero, and erase every object.</p>
+<p><img src="./images/Pasted image 20230208191656.png" alt="Pasted image 20230208191656.png" style="border-radius: 4px;"" ></p>
+<p>And now instead of drawing the score, we will check if the ball exists, if it does not exist, we will draw the message "Game Over".</p>
+<p></p>
+<h2 style="margin-left:0px;" id="Challenge">Challenge</h2>
+<p>As a little challenge, you may create a high score system using the <a href="./../Scripting reference/Storage.md.html">Storage</a> system.</p>
+<p></p>
+<h2 style="margin-left:0px;" id="Code">Code</h2>
+<p>This example is a default Himawari2D game template, it can be found on GitHub here</p>
+<p><a href="https://github.com/TiagoBarros721/Himawari-Templates/tree/master/Pong" target="_blank">https://github.com/TiagoBarros721/Himawari-Templates/tree/master/Pong</a></p>
+</div>
+<div style="width:345px; padding-top: 20px;; position:absolute; top:0; left:0; overflow:auto;">
+	<iframe src="../../treeview.html" width="340px" frameBorder="0" height="900px"></iframe>
+</div>
+</div>
+</body>
+</html>

@@ -10,7 +10,7 @@ Font font = new Font("Verdana.ttf", 15);
 ## Image fonts
 
 Image fonts are fonts that come from a tileset like following:
-![[tile 1.png]]
+![](images\tile1.png)
 
 To initialize an image font you will need a FontMap object, a start x and start y position, a boolean flag and the order of the characters.
 The example bellow is a representation of how to turn the image above int an image font.

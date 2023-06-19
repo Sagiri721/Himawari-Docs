@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/go.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<style>
+	img { max-width:900px; }
+	.codeblock { 
+	background: #B0B0B0; padding:1px 10px 0px 10px; border-radius: 5px; overflow-x:auto; 
+	}
+	code {
+ font-family: monospace; font-size: inherit; color: #202020; 
+	}
+	.inlineCoed {
+ font-family: monospace; font-size: inherit; color: #202020; 
+	}
+</style>
+</head>
+<body style="background: #F0F0F0;">
+<div style="margin: 0 auto; width:1380px;  position: relative;" >
+<div style="width:1000px; padding:20px; margin:0px; z-index: 5; text-align:left; background-color: #DCDCDC; border-radius: 5px; position:absolute; top:0; left:340px;">
+<h1 style="margin-left:0px;" id="Create_animation_from_sprite_sheet">Create animation from sprite sheet</h1>
+<p>To create an animation the first step is to get the sprite sheet of the animation, that is, a big picture that contains every frame. In the current framework version 1.0.3, multiple line sprite sheets are not supported.</p>
+<p>Example of a sprite sheet:</p>
+<p><img src="./images/miniwalk.png" alt="miniwalk.png" style="border-radius: 4px;"" ></p>
+<p></p>
+<p>This type of image is interpreted as an array of buffered images.</p>
+<p>The animation data type stores all the frames of a sprite sheet, to create an animation use the static method: _<a href="Sprites" target="_blank">Sprite</a>.createAnimation_</p>
+<pre class="codeblock"><code style="tab-size: 4;" class="java codeblock">java
+Sprite image = new Sprite(&quot;mini idle.png&quot;);
+Animation walk = Sprite.createAnimation(image, 64, 64, 0, 0, true);
+</pre></code>
+<p>This method takes as parameters the full sprite sheet, the width of an individual sprite, it's height, the x position from where to start cropping, the y position from where to start cropping, and a boolean value, which is true if the sprites are spread out horizontally, and false in the case they were spread out vertically.</p>
+<p></p>
+<h1 style="margin-left:0px;" id="Initialize_animator_component">Initialize animator component</h1>
+<p>The animator component takes an array of animations and controls what the _ImageRenderer_ component displays, the image renderer must also be given.</p>
+<pre class="codeblock"><code style="tab-size: 4;" class="java codeblock">java
+Animation idle = Sprite.createAnimation( new Sprite(bimg), 64, 64, 0, 0, true);
+Animation walk = Sprite.createAnimation(new Sprite(bimg2), 64, 64, 0, 0, true);
+Animation[] anims = {idle, walk};
+
+Animator animator = new Animator(anims, renderer);
+
+addComponent(animator);
+</pre></code>
+<p>Animations may be added programmatically by calling the _Animator.addAnimation_ function which adds a different animation to the Set. Each animation is assigned an ID which corresponds to the order in which they were added to the animations Set.</p>
+<p>To play an animation the _Animator.play_ function must be called:</p>
+<pre class="codeblock"><code style="tab-size: 4;" class="java codeblock">java
+animator.play(0, 0);
+</pre></code>
+<p>In the above example, the "idle" animation will be played, as it was the first to be added to the array, as for the second parameter, it asks for the starting frame of the animation, it should be zero in most cases but it may be changed as needed.</p>
+<p>In opposition, _Animator.pause_ will stop the animation from playing.</p>
+<p></p>
+<p>Some parameters that can be messed around with are the _imageIndex_ and _imageSpeed_, which control respectively the current animation frame, and the play speed.</p>
+<p></p>
+<pre class="codeblock"><code style="tab-size: 4;" class="java codeblock">java
+animator.imageSpeed = 0.01f; //fast
+animator.imageSpeed = 3f; //slow
+</pre></code>
+<p></p>
+<h2 style="margin-left:0px;" id="Animation_Triggers">Animation Triggers</h2>
+<p></p>
+<p></p>
+<p>last edited: <b>Sagiri on 13/10/2022</b></p>
+</div>
+<div style="width:345px; padding-top: 20px;; position:absolute; top:0; left:0; overflow:auto;">
+	<iframe src="../../treeview.html" width="340px" frameBorder="0" height="900px"></iframe>
+</div>
+</div>
+</body>
+</html>

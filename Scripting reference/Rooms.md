@@ -10,7 +10,7 @@ _Isometric tile sets are not supported_
 To create a tile set the constructor receives thre[]()e parameters, the tile set image, the X width of a tile and the Y width of a tile
 In this case for example:
 
-![image](tileset.png)
+![image](images/tileset.png)
 ```java
 Sprite tileSheet = new Sprite("tiles.png");
 TileSet tileset = new TileSet(tileSheet, 16, 16);
@@ -75,7 +75,7 @@ The editor can be opened both unlinked to a project, or opened along with the pr
 
 ## The editor
 
-![[editor 1.png]]
+![editor 1.png](images/editor%201.png)
 
 The editor is divided between 3 tabs.
 The first and main one, Tools, provides tools to create a tile pattern and place objects on the map.
@@ -92,7 +92,7 @@ The button icons on the editor control panel are references to the famous Super 
 
 The second tab, Object Parameters, has input fields for you to input you object information if you have [objects](Objects.md) imported or already manually inputted an [object](Objects.md). 
 If you did in fact import [objects](Objects.md), it means that by pressing the arrow button, you will cycle through your available [objects](Objects.md) and be able to place them.
-![[tab2.png]]
+![tab2.png](images/tab2.png)
 
 The final tab is the Tileset and Project tab, it is made out of only 2 buttons, the _Import Tileset_ and _Import Objects_ button, that both open a file chooser window in where you input, respectively, the tile set image or the Assets/Objects directory of a himawari project. It will import all the objects of the folder to the Object chooser in the previous tab, additionally there is a shortcuts button, it displays an image with all the map editor shortcuts illustrated for quick use, like moving around, zooming and placing tiles.
 

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/go.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<style>
+	img { max-width:900px; }
+	.codeblock { 
+	background: #B0B0B0; padding:1px 10px 0px 10px; border-radius: 5px; overflow-x:auto; 
+	}
+	code {
+ font-family: monospace; font-size: inherit; color: #202020; 
+	}
+	.inlineCoed {
+ font-family: monospace; font-size: inherit; color: #202020; 
+	}
+</style>
+</head>
+<body style="background: #F0F0F0;">
+<div style="margin: 0 auto; width:1380px;  position: relative;" >
+<div style="width:1000px; padding:20px; margin:0px; z-index: 5; text-align:left; background-color: #DCDCDC; border-radius: 5px; position:absolute; top:0; left:340px;">
+<h1 style="margin-left:0px;" id="Create_a_map">Create a map</h1>
+<p></p>
+<h2 style="margin-left:0px;" id="Tile_sets">Tile sets</h2>
+<p></p>
+<p>Tile sets are sprite sheets with all the images that are meant to serve decorative purposes.</p>
+<p>A collection of rectangular images, or tiles.</p>
+<p></p>
+<p>_Isometric tile sets are not supported_</p>
+<p></p>
+<p>To create a tile set the constructor receives thre<a href="" target="_blank"></a>e parameters, the tile set image, the X width of a tile and the Y width of a tile</p>
+<p>In this case for example:</p>
+<p></p>
+<p><img src="./images/tileset.png" alt="tileset.png" style="border-radius: 4px;"" ></p>
+<pre class="codeblock"><code style="tab-size: 4;" class="java codeblock">java
+Sprite tileSheet = new Sprite(&quot;tiles.png&quot;);
+TileSet tileset = new TileSet(tileSheet, 16, 16);
+</pre></code>
+<p></p>
+<h2 style="margin-left:0px;" id="Rooms">Rooms</h2>
+<p>Rooms are where your object are placed in, they contain information on the placement of tiles and object spawning, you can make a game without a Room.</p>
+<p></p>
+<p>A room <b>must</b> be placed inside the Rooms folder in assets and each room has it's own folder with it's name.</p>
+<p>Inside a room folder you may have:</p>
+<p>* A room-tiles.txt</p>
+<p>* A room-objects.txt</p>
+<p></p>
+<h3 style="margin-left:0px;" id="room-tiles">room-tiles</h3>
+<p>The room tiles file has information on what tiles should be placed where:</p>
+<pre class="codeblock"><code style="tab-size: 4;" class="text codeblock">text
+1 1 1 0 0 
+0 1 24 5 0 
+0 0 0 3 4
+</pre></code>
+<p>The room above is 5 tiles long and 3 tiles high, it goes to the referenced tile set object and gets the image of the mentioned index to draw it in it's position on the file.</p>
+<p></p>
+<h3 style="margin-left:0px;" id="room-objects">room-objects</h3>
+<p>The room objects file has information on what objects should be placed and where. It would be boring and result in messy code if all the objects off the room where to be instatiated manually, so this file takes all the information on position, rotation, and scaling of the objects that should be placed on the room beforehand.<br>Format: <code class="inlineCoed"> Wall 80-10 90 1-1</code></p>
+<p></p>
+<p>Optionally a 4th parameter may be given, the <a href="Objects" target="_blank">object</a> name, it's name is attributed to the object once it's created to avoid "Name already attributed to a different object" warnings when compiling.</p>
+<p></p>
+<p>The line above instantiates an object of name "Wall" in the coordinates x=80 y= 10 rotated 90 degrees and with a scaling of x=1 y=1</p>
+<p></p>
+<p>to load the objects of the room, the function loadObjects() mus be called after each object's constructor id called once.</p>
+<pre class="codeblock"><code style="tab-size: 4;" class="java codeblock">java
+Room room0 = new Room(&quot;fields&quot;, tileSet, new RoomData(&quot;room0&quot;));
+
+room0.loadObjects();
+<p><ul style="margin-left:0px;"><li></li></ul></p>
+<p></p>
+<h2 style="margin-left:0px;" id="Create_a_room">Create a room</h2>
+<pre class="codeblock"><code style="tab-size: 4;" class="java codeblock">java
+Sprite tileSheet = new Sprite(&quot;tiles.png&quot;);
+TileSet tileSet = new TileSet(tileSheet, 16, 16);
+
+new Room(&quot;fields&quot;, tileSet, new RoomData(&quot;room0&quot;));
+</pre></code>
+<p></p>
+<h2 style="margin-left:0px;" id="Load_Rooms">Load Rooms</h2>
+<p>The first Room ever added is considered the "startRoom" (RoomHandler.java line 14) it's the first Room to load when the game starts. Rooms can be changed using the roomGoto function, to go to a certain Room it must have been added to the room list first. Rooms are added to that list once their  constructor is called. </p>
+<p></p>
+<pre class="codeblock"><code style="tab-size: 4;" class="java codeblock">java
+Room castle = new Room(&quot;castle&quot;, tileSet, new RoomData(&quot;room_castle&quot;));
+RoomHandler.roomGoto(castle);
+</pre></code>
+<p></p>
+<h1 style="margin-left:0px;" id="Create_a_Room_using_HimawariGUI">Create a Room using HimawariGUI</h1>
+<p>To import a map using HimawariGUI (you need to select a tileset for visualization purpouses in the oldest version of the software, the newer versions initialize with an empty black tileset and let you choose your image), the map folder only holds information for where each tile/object must go.</p>
+<p>To create a map however, you need to select a map width, the height is automatically set to be the same, as the editor does not support rectangular maps in the current 1.1.0 version.</p>
+<p></p>
+<p>The editor can be opened both unlinked to a project, or opened along with the project editor wich initializes everything object related.</p>
+<p></p>
+<h2 style="margin-left:0px;" id="The_editor">The editor</h2>
+<p></p>
+<p><img src="./images/editor 1.png" alt="editor 1.png" style="border-radius: 4px;"" ></p>
+<p></p>
+<p>The editor is divided between 3 tabs.</p>
+<p>The first and main one, Tools, provides tools to create a tile pattern and place objects on the map.</p>
+<p>The button icons on the editor control panel are references to the famous Super Mario World ROM editor "Lunar Magic", from left to right, these are their functionalities:</p>
+<p>* Change the current tile.</p>
+<p>* Change layer. From tile placing mode to object placing mode or vice-versa.</p>
+<p>* Set a placeable object.</p>
+<p>* Tweak zoom settings.</p>
+<p>* Change the camera position.</p>
+<p>* Restart settings. Zoom, position, current tile, etc...</p>
+<p>* Hide/Show Grid toggle</p>
+<p>* Export map.</p>
+<p>* Import map.</p>
+<p></p>
+<p>The second tab, Object Parameters, has input fields for you to input you object information if you have <a href="Objects" target="_blank">objects</a> imported or already manually inputed an <a href="Objects" target="_blank">object</a>. </p>
+<p>If you did in fact import <a href="Objects" target="_blank">objects</a>, it means that by pressing the arrow button, you will cycle through your available <a href="Objects" target="_blank">objects</a> and be able to place them.</p>
+<p><img src="./images/tab2.png" alt="tab2.png" style="border-radius: 4px;"" ></p>
+<p></p>
+<p>The final tab is the Tileset and Project tab, it is made out of only 2 buttons, the _Import Tileset_ ans _Import Objects_ button, that both open a file chooser window in where you input, respectivelly, the tile set image or the Assets/Objects directory of a himawari project. It will import all the objects of the folder to the Object chooser in the previous tab.</p>
+<p></p>
+<p>last edited: <b>Sagiri on 12/10/2022</b></p>
+<p>last edited: <b>Sagiri on 22/10/2022</b></p>
+</div>
+<div style="width:345px; padding-top: 20px;; position:absolute; top:0; left:0; overflow:auto;">
+	<iframe src="../../treeview.html" width="340px" frameBorder="0" height="900px"></iframe>
+</div>
+</div>
+</body>
+</html>

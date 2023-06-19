@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/go.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<style>
+	img { max-width:900px; }
+	.codeblock { 
+	background: #B0B0B0; padding:1px 10px 0px 10px; border-radius: 5px; overflow-x:auto; 
+	}
+	code {
+ font-family: monospace; font-size: inherit; color: #202020; 
+	}
+	.inlineCoed {
+ font-family: monospace; font-size: inherit; color: #202020; 
+	}
+</style>
+</head>
+<body style="background: #F0F0F0;">
+<div style="margin: 0 auto; width:1380px;  position: relative;" >
+<div style="width:1000px; padding:20px; margin:0px; z-index: 5; text-align:left; background-color: #DCDCDC; border-radius: 5px; position:absolute; top:0; left:340px;">
+<h1 style="margin-left:0px;" id="Input">Input</h1>
+<p>Receiving input from the user is rather simple, you can get stuff like the position of the mouse, keyboard presses, and automatically calculate movement axis.</p>
+<p></p>
+<h2 style="margin-left:0px;" id="Mouse_input">Mouse input</h2>
+<p>To have mouse input you can use the function _Input.mousePressed_</p>
+<p>The mouse buttons are represented by numbers:</p>
+<p></p>
+<p>* 0 -> Mouse button left;</p>
+<p>* 1 -> Mouse button middle;</p>
+<p>* 2 -> Mouse button right;</p>
+<p></p>
+<pre class="codeblock"><code style="tab-size: 4;" class="java codeblock">java
+if(Input.mousePressed(0)){
+	//Do stuff
+}
+</pre></code>
+<p></p>
+<h2 style="margin-left:0px;" id="Keyboard_input">Keyboard input</h2>
+<p>To get keyboard input from the user the _Input.isKeyPressed_ function must be called, it receives data from the Keys format, an enumerator with all the keys supported by the engine.</p>
+<p></p>
+<pre class="codeblock"><code style="tab-size: 4;" class="java codeblock">java
+if(Input.isKeyPressed(Keys.Z)){
+	//Perform action
+}
+</pre></code>
+<p></p>
+<h3 style="margin-left:0px;" id="Movement_Axis">Movement Axis</h3>
+<p>Movement axis are variables that can be accessed and whose values vary from only -1 to 1, being -1 when the left value is pressed, 1 when the righ value is pressed and 0 when none are pressed.</p>
+<p></p>
+<p>These axis can be defined and used for whatever purpouse the programmer sees fit.</p>
+<p>The default are:</p>
+<p></p>
+<p>AxisX | AxisY</p>
+<hr>
+<p>A -> D   | W -> S</p>
+<p>LEFT -> RIGHT   | UP -> DOWN</p>
+<p></p>
+<p>These values may be adjusted in the project settings.</p>
+<p></p>
+<pre class="codeblock"><code style="tab-size: 4;" class="java codeblock">java
+Vec2 movement = new Vec2(Input.axisX, Input.axisY);
+</pre></code>
+<p></p>
+<p>last edited: <b>09/12/2022</b></p>
+</div>
+<div style="width:345px; padding-top: 20px;; position:absolute; top:0; left:0; overflow:auto;">
+	<iframe src="../../treeview.html" width="340px" frameBorder="0" height="900px"></iframe>
+</div>
+</div>
+</body>
+</html>
